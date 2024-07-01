@@ -9,7 +9,7 @@ const Marquee = () => {
           initial={{ x: 0 }}
           animate={{ x: "-100%" }}
           transition={{ ease: "linear", repeat: Infinity, duration: 5 }}
-          className='text-[20vw] uppercase -mb-15 pt-1 leading-none font-["Neue Montreal Regular"] font-semibold'
+          className='text-[20vw] uppercase -mb-[1vw] -mt-[2vw] pt-1 leading-none font-["Test Founders Grotesk X-Cond Sm Semi Bold"] font-bold'
         >
           we are ochi
         </motion.h1>
@@ -17,7 +17,7 @@ const Marquee = () => {
           initial={{ x: 0 }}
           animate={{ x: "-100%" }}
           transition={{ ease: "linear", repeat: Infinity, duration: 5 }}
-          className='text-[20vw] uppercase -mb-15 pt-1 leading-none font-["Neue Montreal Regular"] font-semibold'
+          className='text-[20vw] uppercase -mb-[1vw] -mt-[2vw] pt-1 leading-none font-["Test Founders Grotesk X-Cond Sm Semi Bold"] font-bold'
         >
           we are ochi
         </motion.h1>
@@ -25,7 +25,7 @@ const Marquee = () => {
           initial={{ x: 0 }}
           animate={{ x: "-100%" }}
           transition={{ ease: "linear", repeat: Infinity, duration: 5 }}
-          className='text-[20vw] uppercase -mb-15 pt-1 leading-none font-["Neue Montreal Regular"] font-semibold'
+          className='text-[20vw] uppercase -mb-[1vw] -mt-[2vw] pt-1 leading-none font-["Test Founders Grotesk X-Cond Sm Semi Bold"] font-bold'
         >
           we are ochi
         </motion.h1>
