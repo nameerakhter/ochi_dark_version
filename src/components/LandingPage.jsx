@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 import { FaArrowUpLong } from "react-icons/fa6";
 
@@ -10,13 +11,18 @@ const LandingPage = () => {
             <div className="masker ">
               <div className="w-fit flex ">
                 {index === 1 && (
-                  <div className="mr-[1vw] w-[8vw] mt-[1vw] rounded  top-[1.2vw]">
-                    <img
+                  <motion.div
+                    initial={{ width: 0 }}
+                    animate={{ width: "9vw" }}
+                    transition={{ ease: [0.76, 0, 0.24, 1], duration: 1.5}}
+                    className="mr-[1vw] w-[8vw] mt-[1vw] rounded  top-[1.2vw]"
+                  >
+                    <motion.img
                       className="w-full h-6vw rounded"
                       src="https://ochi.design/wp-content/uploads/2022/04/content-image01.jpg"
                       alt="home"
                     />
-                  </div>
+                  </motion.div>
                 )}
                 <h1 className='uppercase text-[7.5vw] leading-[7vw] tracking-tighter font-["Test Founders Grotesk X-Cond_SmSemi Bold"] font-medium md:text-[5.5vw]'>
                   {item}
