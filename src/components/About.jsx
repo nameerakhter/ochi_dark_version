@@ -5,7 +5,7 @@ import { useRef, useEffect } from 'react';
 const About = () => {
     
   return (
-    <div className="w-full p-20 bg-[#CDEA68] rounded-tl-3xl rounded-tr-3xl text-black ">
+    <div  className="w-full p-20 bg-[#CDEA68] rounded-tl-3xl rounded-tr-3xl text-black ">
       <h1 className="font-['Neue Montreal Regular'] text-[4vw] leading-[4.5vw] tracking-tighter mb-[4vw]">
         Ochi is a strategic partner for fast-growning tech businesses that need
         to raise funds, sell products, explain complex ideas, and hire great
