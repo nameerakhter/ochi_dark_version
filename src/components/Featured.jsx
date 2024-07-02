@@ -1,9 +1,15 @@
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import React, { useState } from "react";
-import { Power4 } from "gsap";
 
 const Featured = () => {
-  const [hover, setHover] = useState(false);
+  const cards = [useAnimation(), useAnimation()];
+
+  const handleHover = (index) => {
+    cards[index].start({ y: "0" });
+  };
+  const handleHoverEnd = (index) => {
+    cards[index].start({ y: "100%" });
+  };
 
   return (
     <div className="w-full py-20 ">
@@ -14,17 +20,18 @@ const Featured = () => {
       </div>
       <div className="px-20">
         <div className="cards w-full flex gap-10 mt-10">
-          <div
-            onMouseEnter={() => setHover(true)}
-            onMouseLeave={() => setHover(false)}
+          <motion.div
+            onHoverStart={() => handleHover(0)}
+            onHoverEnd={() => handleHoverEnd(0)}
             className="card_container w-1/2  h-[75vh] relative"
           >
             <h1 className="absolute flex left-full z-[9] text-9xl font-['Neue Montreal Regular'] leading-none tracking-tighter -translate-x-1/2 top-1/2 -translate-y-1/2 overflow-hidden text-[#CDEA68]">
               {"FYDE".split("").map((item, index) => (
                 <motion.span
+                  key={index}
                   initial={{ y: "100%" }}
-                  animate={hover ? { y: "0%" } : { y: "100%" }}
-                  transition={{ ease: [0.22, 1, 0.36, 1], delay: index * 0.1 }}
+                  animate={cards[0]}
+                  transition={{ ease: [0.22, 1, 0.36, 1], delay: index * 0.05 }}
                   className="inline-block"
                 >
                   {item}
@@ -38,18 +45,19 @@ const Featured = () => {
                 alt=""
               />
             </div>
-          </div>
-          <div
-            onMouseEnter={() => setHover(true)}
-            onMouseLeave={() => setHover(false)}
+          </motion.div>
+          <motion.div
+            onHoverStart={() => handleHover(1)}
+            onHoverEnd={() => handleHoverEnd(1)}
             className="card_container relative w-1/2  h-[75vh] "
           >
-            <h1 className="absolute flex right-full z-[9] text-9xl font-['Neue Montreal Regular'] leading-none tracking-tighter translate-x-1/2 top-1/2 -translate-y-1/2  text-[#CDEA68]">
+            <h1 className="absolute flex overflow-hidden right-full z-[9] text-9xl font-['Neue Montreal Regular'] leading-none tracking-tighter translate-x-1/2 top-1/2 -translate-y-1/2  text-[#CDEA68]">
               {"VISE".split("").map((item, index) => (
                 <motion.span
+                  key={index}
                   initial={{ y: "100%" }}
-                  animate={hover ? { y: "0%" } : { y: "100%" }}
-                  transition={{ ease: [0.22, 1, 0.36, 1], delay: index * 0.1 }}
+                  animate={cards[1]}
+                  transition={{ ease: [0.22, 1, 0.36, 1], delay: index * 0.05 }}
                   className="inline-block"
                 >
                   {item}
@@ -64,7 +72,7 @@ const Featured = () => {
                 alt=""
               />
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
