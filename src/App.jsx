@@ -5,8 +5,14 @@ import Marquee from "./components/Marquee";
 import About from "./components/About";
 import Eyes from "./components/Eyes";
 import Featured from "./components/Featured";
+import Cards from "./components/Cards";
+import Footer from "./components/Footer";
+import LocomotiveScroll from 'locomotive-scroll';
 
 const App = () => {
+
+const locomotiveScroll = new LocomotiveScroll();
+
   return (
     <div>
       <div className="min-h-screen w-full text-white bg-zinc-900">
@@ -16,9 +22,8 @@ const App = () => {
         <About />
         <Eyes />
         <Featured />
-        {/*<cards />
-        <ready to start />
-        <footer /> */}
+        <Cards />
+        <Footer />
       </div>
     </div>
   );
