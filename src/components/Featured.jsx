@@ -1,6 +1,6 @@
 import { motion, useAnimation } from "framer-motion";
 
-const Featured = () => {
+export default function Featured(){
   const cards = [useAnimation(), useAnimation()];
 
   const handleHover = (index) => {
@@ -77,6 +77,4 @@ const Featured = () => {
       </div>
     </div>
   );
-};
-
-export default Featured;
+}
