@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
-import { FaArrowUpLong } from "react-icons/fa6";
+import { motion } from 'framer-motion'
+import { FaArrowUpLong } from 'react-icons/fa6'
 
 const LandingPage = () => {
   return (
@@ -10,59 +10,53 @@ const LandingPage = () => {
       className="w-full bg-zinc-900 pt-2"
     >
       <div className="textstructure mt-32 px-5 md:mt-52 md:px-20">
-        {[
-          "We create",
-          "Eye-opening",
-          "Presentations",
-        ].map((item, index) => {
+        {['We create', 'Eye-opening', 'Presentations'].map((item, index) => {
           return (
             <div key={index} className="masker">
-              <div className="w-fit flex flex-col md:flex-row">
+              <div className="flex w-fit flex-col md:flex-row">
                 {index === 1 && (
                   <motion.div
                     initial={{ width: 0 }}
                     animate={{
-                      width: "clamp(10vw, 9vw, 9vw)",
+                      width: 'clamp(10vw, 9vw, 9vw)',
                     }}
                     transition={{ ease: [0.76, 0, 0.24, 1], duration: 1.5 }}
-                    className="mr-[1vw] w-[50vw] md:w-[8vw] mt-[1vw] rounded top-[1.2vw]"
+                    className="top-[1.2vw] mr-[1vw] mt-[1vw] w-[50vw] rounded md:w-[8vw]"
                   >
                     <motion.img
-                      className="max-w-[40vw] h-auto w-full md:h-[6vw] rounded"
+                      className="h-auto w-full max-w-[40vw] rounded md:h-[6vw]"
                       src="https://ochi.design/wp-content/uploads/2022/04/content-image01.jpg"
                       alt="home"
                     />
                   </motion.div>
                 )}
-                <h1
-                  className='uppercase text-[12vw] leading-[12vw] md:text-[7.5vw] md:leading-[7vw] tracking-tighter font-["Test Founders Grotesk X-Cond_SmSemi Bold"] font-medium'
-                >
+                <h1 className='font-["Test Founders Grotesk X-Cond_SmSemi Bold"] text-[12vw] font-medium uppercase leading-[12vw] tracking-tighter md:text-[7.5vw] md:leading-[7vw]'>
                   {item}
                 </h1>
               </div>
             </div>
-          );
+          )
         })}
       </div>
-      <div className="border-t-[1px] border-zinc-800 mt-10 md:mt-20 flex flex-col md:flex-row justify-between items-center py-5 px-5 md:px-20">
-        <div className="flex flex-col md:flex-row gap-5 md:gap-10">
+      <div className="mt-10 flex flex-col items-center justify-between border-t-[1px] border-zinc-800 px-5 py-5 md:mt-20 md:flex-row md:px-20">
+        <div className="flex flex-col gap-5 md:flex-row md:gap-10">
           {[
-            "For public and private companies",
-            "From the first pitch to IPO",
+            'For public and private companies',
+            'From the first pitch to IPO',
           ].map((item, index) => (
             <p
               key={index}
-              className="text-sm md:text-md font-light tracking-tighter text-center md:text-left"
+              className="md:text-md text-center text-sm font-light tracking-tighter md:text-left"
             >
               {item}
             </p>
           ))}
         </div>
-        <div className="start flex items-center gap-5 mt-5 md:mt-0">
-          <div className="px-4 py-2 md:px-5 md:py-2 border-[1px] border-zinc-500 rounded-full uppercase font-light text-sm md:text-md">
+        <div className="start mt-5 flex items-center gap-5 md:mt-0">
+          <div className="md:text-md rounded-full border-[1px] border-zinc-500 px-4 py-2 text-sm font-light uppercase md:px-5 md:py-2">
             START THE PROJECT
           </div>
-          <div className="px-4 py-2 md:px-5 md:py-2 border-[1px] border-zinc-500 rounded-full w-10 h-10 flex items-center justify-center">
+          <div className="flex h-10 w-10 items-center justify-center rounded-full border-[1px] border-zinc-500 px-4 py-2 md:px-5 md:py-2">
             <span className="rotate-[45deg]">
               <FaArrowUpLong />
             </span>
@@ -70,7 +64,7 @@ const LandingPage = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default LandingPage;
+export default LandingPage
